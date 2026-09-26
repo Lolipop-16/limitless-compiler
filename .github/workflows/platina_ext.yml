@@ -190,6 +190,8 @@ jobs:
             curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.2.0-enjoy
          elif [ ${{ inputs.kernelsu }} == 3.4 ]; then
             curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.4.0
+         elif [ ${{ inputs.kernelsu }} == 3.4-susfs ]; then
+            curl -LSs https://raw.githubusercontent.com/ThRE-Team/KernelSU-Next/main/kernel/setup.sh | bash -s v3.4.0-enjoy
          elif [ ${{ inputs.kernelsu }} != false ]; then
             ${{ inputs.kernelsu }}
          fi
