@@ -1,5 +1,5 @@
 # Annoy Project
-name: platina_ext
+name: platinaGCC
 on:
   workflow_dispatch:
     inputs:
