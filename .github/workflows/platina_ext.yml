@@ -181,7 +181,7 @@ jobs:
          if [ ${{ inputs.kernelsu }} == loli ]; then
             curl -LSs "https://raw.githubusercontent.com/Lolipop-16/KernelSU/refs/heads/main/kernel/setup.sh" | bash -s main
          elif [ ${{ inputs.kernelsu }} == susfs ]; then
-            curl -LSs "https://raw.githubusercontent.com/Lolipop-16/KernelSU/refs/heads/main/kernel/setup.sh" | bash -s main
+            curl -LSs "https://raw.githubusercontent.com/Lolipop-16/KernelSU/refs/heads/main-susfs/kernel/setup.sh" | bash -s main-susfs
          elif [ ${{ inputs.kernelsu }} == next ]; then
             curl -LSs "https://raw.githubusercontent.com/shiftbell/KernelSU-Next/legacy/kernel/setup.sh" | bash -s legacy
          elif [ ${{ inputs.kernelsu }} == hookless ]; then   
