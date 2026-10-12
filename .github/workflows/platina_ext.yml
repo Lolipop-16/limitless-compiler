@@ -10,7 +10,7 @@ on:
         type: string
       name:
         description: 'Name'
-        default: '4.4.302-Loneliness-nomount'
+        default: '4.4.302-Loneliness'
         required: true
         type: string
       compiler:
@@ -30,7 +30,7 @@ on:
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'vic-susfs'
+        default: 'vic-hookless'
         required: true
         type: string
       kernel-config:
@@ -40,7 +40,7 @@ on:
         type: string
       kernelsu:
         description: 'KernelSU | false for disable'
-        default: '3.4'
+        default: 'loli'
         required: true
         type: string
       disable-lto:
@@ -178,8 +178,8 @@ jobs:
             fi
          fi
          rm -rf KernelSU
-         if [ ${{ inputs.kernelsu }} == ksu ]; then
-            curl -LSs "https://raw.githubusercontent.com/backslashxx/KernelSU/master/kernel/setup.sh" | bash -s master
+         if [ ${{ inputs.kernelsu }} == loli ]; then
+            curl -LSs "https://raw.githubusercontent.com/Lolipop-16/KernelSU/refs/heads/main/kernel/setup.sh" | bash -s main
          elif [ ${{ inputs.kernelsu }} == next ]; then
             curl -LSs "https://raw.githubusercontent.com/shiftbell/KernelSU-Next/legacy/kernel/setup.sh" | bash -s legacy
          elif [ ${{ inputs.kernelsu }} == hookless ]; then   
