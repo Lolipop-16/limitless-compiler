@@ -178,12 +178,10 @@ jobs:
             fi
          fi
          rm -rf KernelSU
-         if [ ${{ inputs.kernelsu }} == 3.4.1 ]; then
+         if [ ${{ inputs.kernelsu }} == main ]; then
             curl -LSs "https://raw.githubusercontent.com/Lolipop-16/KernelSU/refs/heads/main/kernel/setup.sh" | bash -s main
-         elif [ ${{ inputs.kernelsu }} == 3.4.1-susfs ]; then
-            curl -LSs "https://raw.githubusercontent.com/Lolipop-16/KernelSU/refs/heads/main-susfs/kernel/setup.sh" | bash -s main-susfs
          elif [ ${{ inputs.kernelsu }} == susfs ]; then
-            curl -LSs "https://raw.githubusercontent.com/Lolipop-16/KernelSU/refs/heads/susfs/kernel/setup.sh" | bash -s susfs
+            curl -LSs "https://raw.githubusercontent.com/Lolipop-16/KernelSU/refs/heads/main-susfs/kernel/setup.sh" | bash -s main-susfs
          elif [ ${{ inputs.kernelsu }} != false ]; then
             ${{ inputs.kernelsu }}
          fi
