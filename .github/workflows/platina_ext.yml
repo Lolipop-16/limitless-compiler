@@ -30,7 +30,7 @@ on:
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'vic-susfs'
+        default: '15-2.3.0'
         required: true
         type: string
       kernel-config:
@@ -40,7 +40,7 @@ on:
         type: string
       kernelsu:
         description: 'KernelSU | false for disable'
-        default: '3.4.1-susfs'
+        default: 'susfs'
         required: true
         type: string
       disable-lto:
@@ -128,7 +128,7 @@ jobs:
             elif [ ${{ inputs.aosp-clang }} == "19" ]; then
                 aria2c -o aosp-clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r530567.tar.gz
             elif [ ${{ inputs.aosp-clang }} == "20" ]; then
-                aria2c -o aosp-clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz          
+                aria2c -o aosp-clang.tar.gz https://github.com/ThRE-Team/direct/releases/download/clang-r547379/clang-r547379.tar.gz          
             elif [ ${{ inputs.aosp-clang }} == "21" ]; then
                 aria2c -o aosp-clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/0998f421320ae02fddabec8a78b91bf7620159f6/clang-r563880.tar.gz         
             elif [ ${{ inputs.aosp-clang }} == "23" ]; then
